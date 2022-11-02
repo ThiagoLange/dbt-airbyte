@@ -1,0 +1,12 @@
+
+with dw_faturamento_ano as (
+
+    select DATE_PART('year', purchased_at) AS "Ano"
+        ,sum(ap.price) as "Faturamento"
+    from public.airbyte_purchases pur inner join airbyte_products ap
+    on pur.product_id = ap.id
+    group by 1
+    order by 1 DESC
+)
+
+select * from dw_faturamento_ano
