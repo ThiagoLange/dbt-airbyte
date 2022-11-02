@@ -1,4 +1,3 @@
-
 with dw_faturamento_model as (
 
     select pro.model as "Model"

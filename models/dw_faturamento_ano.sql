@@ -1,4 +1,3 @@
-
 with dw_faturamento_ano as (
 
     select DATE_PART('year', purchased_at) AS "Ano"
